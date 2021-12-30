@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Recognition</title>
+</head>
+<body>
+    <main class="container">
+        <div></div>
+        <div>Ввод</div>
+        <div>Результат</div>
+
+        <div class="controls">
+            <button id="submit-btn" class="button">Распознать</button>
+            <button id="clear-btn" class="button">Очистить</button>    
+        </div>
+
+        <canvas width="200px" height="200px" class="canvas" id="canvas"></canvas>
+    
+        <div id="result" class="bars"></div>
+    </main>
+
+    <script defer type="module" src="./index.ts"></script>    
+</body>
+</html>

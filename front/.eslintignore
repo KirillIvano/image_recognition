@@ -1,0 +1,12 @@
+# utility folders
+dist/
+_site/
+.vscode/
+node_modules/
+
+# config stuff
+.eslintrc.js
+.prettierrc.json
+tsconfig.json
+jest.config.js
+stylelint.config.js

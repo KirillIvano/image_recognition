@@ -1,0 +1,103 @@
+*,
+*::after,
+*::before {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: inherit;
+}
+
+html {    
+    --yellow: #fdf0c4;
+    --light-blue: #82a0c2;
+    --violet: #4c364d;
+
+    font-family: Ubuntu;
+    background: var(--yellow);
+}
+
+.canvas {
+    width: 200px;
+    height: 200px;
+
+    margin-top: 12px;
+    border: 2px solid var(--light-blue);
+    box-shadow: 10px 10px var(--gray); 
+}
+
+.container {
+    padding-left: 12px;
+    padding-right: 12px;
+
+    display: grid;
+    grid-template-rows: auto 100px;
+    grid-template-columns: 100px 200px 300px;
+    column-gap: 16px;
+}
+
+
+.button {
+    width: max-content;
+    min-width: 100px;
+    border: none;
+
+    padding: 10px 6px;
+    background: var(--violet);
+    transition: background .3s ease-in-out;
+    color: white;
+
+    cursor: pointer;
+}
+
+.controls {
+    margin-top: 12px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.button:disabled {
+    background: gray;
+    cursor: default;
+}
+
+.bars {
+    margin-top: 16px;
+    height: 200px;
+
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+    gap: 4px;
+
+    background: white;
+}
+
+.bar {
+    position: relative;
+
+    height: 100%;
+    width: 30px;
+}
+
+.bar .bar-bg {
+    height: 100%;
+
+    background: var(--violet);
+
+    transition: transform .3s;
+    transform-origin: bottom;
+}
+
+.bar .bar-caption {
+    height: 20px;
+
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+
+    background: orange;
+    text-align: center; 
+}
