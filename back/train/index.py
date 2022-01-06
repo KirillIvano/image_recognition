@@ -37,16 +37,18 @@ def create_model():
     # построение сверточной нейронной сети
     model = Sequential()
 
-    # первое сжатие
+    # первая свертка
     model.add(Conv2D(64, (3, 3), activation='relu', kernel_initializer='he_uniform', input_shape=(28, 28, 1)))
     model.add(MaxPooling2D((2, 2)))
 
-    # второе сжатие
+    # вторая свертка
     model.add(Conv2D(128, (3, 3), activation='relu', kernel_initializer='he_uniform'))
     model.add(MaxPooling2D((2, 2)))
 
     # Переводим каждую 28x28 картинку в 784 мерный вектор
     model.add(Flatten())
+
+    # дополннительный полносвязный слой
     model.add(Dense(128, activation='relu', kernel_initializer='he_uniform'))
 
     # Избегаем лишних прогонов

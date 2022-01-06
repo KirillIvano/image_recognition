@@ -1,7 +1,7 @@
 import {Dot} from "@/types";
 
 /** Сколько точек используются для скругления кривой */
-const SMOOTH_FACTOR = 4;
+const SMOOTH_FACTOR = 2;
 
 /** Сглаживание методом скальзящей средней сохранением конечных точек */
 export const smoothLine = (line: Dot[]): Dot[] => {

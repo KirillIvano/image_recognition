@@ -9,7 +9,6 @@ export const fetchStatus = createAtom({start: noop, end: noop, reset: noop}, (tr
     return state;
 })
 
-
 const defaultFetchAtom = Array.from({length: 10}, () => 0);
 export const fetchAtom = createAtom({fulfilled: (num: number[]) => num, reset: noop}, (track, state: number[] = defaultFetchAtom) => {
     track.onAction('fulfilled', n => (state = n));
